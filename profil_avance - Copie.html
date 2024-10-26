@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleYoussra.css">
+    <title>Ma Page Personnelle</title>
+
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h1>Ethar Youssra</h1>
+
+    <section>
+        <h2> voici la première section</h2>
+        <p>Bonjour, je m'appelle Youssra . Je suis passionné par la technologie et le développement web.</p>
+        <p>J'aime apprendre de nouvelles choses et partager mes connaissances avec les autres.</p>
+        <img src="picYoussra.jpg" >
+    </section>
+
+    <section>
+        <h2>Mes hobbies</h2>
+        <ul>
+            <li>Lecture</li>
+            <li>Voyage</li>
+            <li>Programmation</li>
+            <li>Photographie</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Mes objectifs</h2>
+        <ol>
+            <li>Apprendre un nouveau langage de programmation.</li>
+            <li>Développer un projet personnel.</li>
+            <li>Participer à des conférences sur la technologie.</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Mes amis</h2>
+        <table>
+            <tr>
+                <th>Nom</th>
+                <th>Âge</th>
+                <th>Ville</th>
+                <th>Profil</th>
+            </tr>
+            <tr>
+                <td>Alice</td>
+                <td>25</td>
+                <td>Paris</td>
+                <td><a href="https://example.com/alice" target="_blank">Voir Profil</a></td>
+            </tr>
+            <tr>
+                <td>Bob</td>
+                <td>30</td>
+                <td>Lyon</td>
+                <td><a href="https://example.com/bob" target="_blank">Voir Profil</a></td>
+            </tr>
+            <tr>
+                <td>Charlie</td>
+                <td>28</td>
+                <td>Marseille</td>
+                <td><a href="https://example.com/charlie" target="_blank">Voir Profil</a></td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <h2>Contactez-moi</h2>
+        <form action="#" method="post">
+            <label for="name">Nom :</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email :</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="message">Message :</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        if (name === '') {
+            alert('Le champ "Nom" est requis.');
+            return;
+        }
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailPattern.test(email)) {
+            alert('Veuillez entrer une adresse email valide.');
+            return;
+        }
+        alert('Formulaire soumis avec succès !');
+    });
+</script>
+</body>
+</html>
+
